@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { isSupabaseConfigured, supabase } from "../lib/supabase";
 import "../style/CertificateVerification.css";
-
+import flag from "../assets/flag.png";
 function formatDate(value) {
   const [year, month, day] = value.split("-").map(Number);
   return new Date(year, month - 1, day).toLocaleDateString("en-GB", {
@@ -305,7 +305,7 @@ export default function CertificateVerification({ certificateId }) {
               </div>
 
               <div className="cv-msme">
-                <span className="cv-msme-icon" aria-hidden="true"></span>
+                <img className="cv-msme-icon" src={flag} alt="Indian flag" />
                 <div>
                   <b>MSME Registered</b>
                   <span>UDYAM-TN-02-0397015</span>
